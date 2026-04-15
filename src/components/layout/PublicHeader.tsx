@@ -118,7 +118,8 @@ export const PublicHeader = () => {
   const activeSlug = firstSegment && !GLOBAL_ROUTES.includes(firstSegment) ? firstSegment : null;
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_BASE_URL}/cities`)
+    const baseUrl = import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, '');
+    fetch(`${baseUrl}/cities`)
       .then(r => r.json())
       .then(setCities)
       .catch(() => {});
