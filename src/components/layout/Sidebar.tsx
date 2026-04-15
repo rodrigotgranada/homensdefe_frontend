@@ -71,6 +71,9 @@ export const Sidebar = () => {
       {/* Spacer */}
       <div className="flex-1" />
 
+      <p className="text-xs text-slate-600 uppercase tracking-widest px-4 py-2 mt-1">Sua Conta</p>
+      <MenuLink to="/admin/perfil" icon="👤" label="Meu Perfil" />
+
       {/* Quick link to public site */}
       {myCity && isLocalAdm && (
         <Link

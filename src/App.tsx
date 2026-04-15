@@ -16,6 +16,8 @@ import { Dashboard } from './pages/admin/Dashboard';
 import { LoginPage } from './pages/auth/LoginPage';
 import { RegisterPage } from './pages/auth/RegisterPage';
 import { ForgotPasswordPage } from './pages/auth/ForgotPasswordPage';
+import { ResetPasswordPage } from './pages/auth/ResetPasswordPage';
+import { ProfilePage } from './pages/admin/ProfilePage';
 
 function App() {
   return (
@@ -26,11 +28,13 @@ function App() {
           <Route path="/admin/login" element={<LoginPage />} />
           <Route path="/admin/registro" element={<RegisterPage />} />
           <Route path="/admin/esqueci-senha" element={<ForgotPasswordPage />} />
+          <Route path="/admin/reset-senha" element={<ResetPasswordPage />} />
 
           {/* Admin Panel — protected, only SUPER_ADM and LOCAL_ADM */}
           <Route element={<AuthGuard allowedRoles={['SUPER_ADM', 'LOCAL_ADM']} />}>
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<Dashboard />} />
+              <Route path="perfil" element={<ProfilePage />} />
             </Route>
           </Route>
 

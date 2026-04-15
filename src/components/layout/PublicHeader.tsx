@@ -190,6 +190,9 @@ export const PublicHeader = () => {
                     <Link to="/admin" onClick={() => setDropdownOpen(false)} className="flex items-center gap-2 px-4 py-3 text-sm text-slate-300 hover:bg-dark-border hover:text-white transition-colors">
                       📊 Painel Admin
                     </Link>
+                    <Link to="/admin/perfil" onClick={() => setDropdownOpen(false)} className="flex items-center gap-2 px-4 py-3 text-sm text-slate-300 hover:bg-dark-border hover:text-white transition-colors">
+                      👤 Meu Perfil
+                    </Link>
                     <button
                       onClick={() => { logout(); setDropdownOpen(false); }}
                       className="w-full text-left flex items-center gap-2 px-4 py-3 text-sm text-red-400 hover:bg-dark-border transition-colors"
