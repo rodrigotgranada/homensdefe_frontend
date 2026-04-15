@@ -1,3 +1,4 @@
+// AMBIENTE DE DESENVOLVIMENTO - TESTE DE DEPLOY
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { AuthGuard } from './components/auth/AuthGuard';
@@ -53,3 +54,4 @@ function App() {
 }
 
 export default App;
+
