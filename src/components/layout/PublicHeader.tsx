@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 
 interface City {
@@ -107,7 +107,6 @@ const NavDrawer = ({
 export const PublicHeader = () => {
   const { user, logout } = useAuth();
   const location = useLocation();
-  const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [cities, setCities] = useState<City[]>([]);
@@ -220,3 +219,4 @@ export const PublicHeader = () => {
     </>
   );
 };
+
